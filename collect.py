@@ -95,7 +95,7 @@ def collect():
     except Exception: old = []
     seen = {x["id"] for x in old}; ai = bool(os.environ.get("ANTHROPIC_API_KEY")); new = []
     for q in QUERIES:
-        url = "https://news.google.com/rss/search?q=" + urllib.parse.quote(q + " when:1y") + "&hl=en-IN&gl=IN&ceid=IN:en"
+        url = "https://news.google.com/rss/search?q=" + urllib.parse.quote(q + " when:7d") + "&hl=en-IN&gl=IN&ceid=IN:en"
         try: feed = feedparser.parse(url)
         except Exception: continue
         for e in feed.entries[:15]:
