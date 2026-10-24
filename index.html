@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Delegation Radar · Feelivacation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f4ee;--c:#fff;--c2:#faf8f3;--t:#14213d;--m:#6b7280;--a:#9a7b2f;--a2:#14213d;--b:#e6e1d4;--g:#1f9d6b;--sh:0 1px 2px #14213d0d,0 8px 24px #14213d0f}
+@media(prefers-color-scheme:dark){:root{--bg:#0a101d;--c:#111a2c;--c2:#0e1626;--t:#eef1f7;--m:#8b97ad;--a:#d4af61;--a2:#d4af61;--b:#1f2b42;--sh:0 8px 28px #0006}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:14px/1.5 Inter,system-ui,sans-serif}
+.w{max-width:1240px;margin:auto;padding:20px 18px 60px}
+header{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{display:flex;gap:12px;align-items:center}.lg{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--a),#14213d);display:grid;place-items:center;color:#fff;font-size:20px}
+h1{font:600 24px Fraunces,Georgia,serif;margin:0;letter-spacing:.2px}.sub{color:var(--m);font-size:12.5px}
+.live{display:inline-flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:50%;background:#9aa3b2}.dot.on{background:var(--g);box-shadow:0 0 0 4px #1f9d6b30;animation:p 2s infinite}@keyframes p{50%{box-shadow:0 0 0 7px #1f9d6b10}}
+button,select,input{font:inherit;color:var(--t)}
+.btn{border:1px solid var(--b);background:var(--c);padding:8px 13px;border-radius:10px;cursor:pointer;box-shadow:var(--sh)}.btn:hover{border-color:var(--a)}
+.btn.p{background:var(--a2);color:#fff;border-color:var(--a2)}@media(prefers-color-scheme:dark){.btn.p{color:#0a101d}}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:22px 0}
+.k{background:var(--c);border:1px solid var(--b);border-radius:16px;padding:16px 18px;box-shadow:var(--sh)}.k b{font:600 30px Fraunces,serif;display:block}.k span{color:var(--m);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.bar input,.bar select{background:var(--c);border:1px solid var(--b);border-radius:10px;padding:9px 12px;min-width:150px}.bar input{flex:1;min-width:200px}
+.tabs{display:flex;gap:4px;background:var(--c);border:1px solid var(--b);border-radius:12px;padding:4px}.tabs button{border:0;background:none;padding:7px 14px;border-radius:9px;cursor:pointer;color:var(--m)}.tabs button.on{background:var(--a2);color:#fff}@media(prefers-color-scheme:dark){.tabs button.on{color:#0a101d}}
+.tb{background:var(--c);border:1px solid var(--b);border-radius:16px;box-shadow:var(--sh);overflow:hidden}
+.sc{overflow-x:auto}table{width:100%;border-collapse:collapse}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--m);text-align:left;padding:12px 14px;background:var(--c2);border-bottom:1px solid var(--b);white-space:nowrap}
+td{padding:12px 14px;border-bottom:1px solid var(--b);vertical-align:top}tr.s{cursor:pointer}tr.s:hover td{background:var(--c2)}
+.st{font-weight:600}.n{display:inline-grid;place-items:center;min-width:26px;height:26px;border-radius:8px;background:var(--c2);border:1px solid var(--b);font-weight:600}.n.h{background:var(--a2);color:#fff;border:0}@media(prefers-color-scheme:dark){.n.h{color:#0a101d}}
+.ch{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:99px;border:1px solid var(--b);background:var(--c2);margin:0 4px 4px 0}.ch.a{border-color:var(--a);color:var(--a)}
+textarea{width:100%;min-width:230px;min-height:52px;resize:vertical;border:1px solid var(--b);background:var(--c2);border-radius:10px;padding:8px 10px;font:inherit;color:var(--t)}textarea:focus,.bar input:focus{outline:2px solid var(--a);border-color:transparent}
+.dt td{background:var(--c2);padding:6px 14px 16px}
+.rec{background:var(--c);border:1px solid var(--b);border-radius:14px;padding:14px 16px;margin-top:10px}.rec h4{margin:0 0 4px;font-size:14px}
+.ct{margin-top:10px;padding:10px 12px;border:1px dashed var(--a);border-radius:10px;font-size:13px}.ct a{color:var(--a);font-weight:500}
+.cp{border:0;background:var(--c2);border:1px solid var(--b);border-radius:6px;padding:1px 7px;font-size:11px;cursor:pointer;margin-left:4px}
+.m{color:var(--m);font-size:12px}
+#ts{position:fixed;right:14px;top:14px;display:flex;flex-direction:column;gap:10px;max-width:340px;z-index:9}
+.to{background:var(--c);border:1px solid var(--a);border-left:5px solid var(--a);border-radius:12px;padding:12px 14px;box-shadow:var(--sh);font-size:13px}
+.emp{padding:40px;text-align:center;color:var(--m)}
+footer{margin-top:24px;color:var(--m);font-size:12px;text-align:center}
+</style></head><body><div id="ts"></div><div class="w">
+<header><div class="brand"><div class="lg">◎</div><div><h1>Delegation Radar</h1><div class="sub"><span class="live"><span class="dot" id="d"></span><span id="ls">connecting…</span></span> · by Feelivacation</div></div></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="bell">🔔 Alerts</button><button class="btn" id="ex">⬇ Backup notes</button><button class="btn" id="im">⬆ Restore notes</button><button class="btn p" id="csv">Export CSV</button><input type="file" id="fi" accept=".json" hidden></div></header>
+<div class="kp"><div class="k"><b id="k1">0</b><span>Records tracked</span></div><div class="k"><b id="k2">0</b><span>States active</span></div><div class="k"><b id="k3">0</b><span>Destination countries</span></div><div class="k"><b id="k4">0</b><span>With contact found</span></div></div>
+<div class="bar"><div class="tabs"><button id="t1" class="on">State tracker</button><button id="t2">Live feed</button></div><input id="q" placeholder="Search state, country, field…"><select id="ff"></select><select id="fc"></select></div>
+<div class="tb"><div class="sc" id="main"></div></div>
+<footer>Data public news sources se auto-collect hota hai. Contact details outreach se pehle official site par verify karein. Notes sirf is browser mein save hote hain – “Backup notes” se file bana lein.</footer></div>
+<script>
+const STATES=["Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal","Delhi","Jammu and Kashmir","Ladakh","Puducherry","Chandigarh"];
+const DEPT={"Horticulture":"Horticulture Department","Agriculture":"Agriculture Department","Education":"Education Department","Health":"Health Department","Sports":"Sports & Youth Affairs","IT / AI":"IT Department","Tourism":"Tourism Department","Industry / Investment":"Industries Department","Urban / Infra":"Urban Development","Fisheries":"Fisheries Department","Skill / Youth":"Skill Development","Culture":"Art & Culture","Other":"General Administration"};
+const $=i=>document.getElementById(i),E=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let D=[],C={},F={f:"",c:"",q:""},tab=1,open=new Set(),pend=false,first=true,N={};
+try{N=JSON.parse(localStorage.getItem("radar_notes_v1")||"{}")}catch(e){}
+const saveN=()=>{try{localStorage.setItem("radar_notes_v1",JSON.stringify(N))}catch(e){}};
+const u=a=>[...new Set(a)].sort(),opt=(a,h)=>`<option value="">${h}</option>`+a.map(x=>`<option>${E(x)}</option>`).join("");
+function toast(t,b){const e=document.createElement("div");e.className="to";e.innerHTML=`<b>${E(t)}</b><br>${E(b)}`;$("ts").prepend(e);setTimeout(()=>e.remove(),9000);try{if(Notification.permission==="granted")new Notification(t,{body:b})}catch(x){}}
+const ck=x=>C[x.state+"|"+x.field];
+function contact(x){const c=ck(x),d=DEPT[x.field]||"Department",g="https://www.google.com/search?q="+encodeURIComponent(`${x.state} ${d} official contact email site:gov.in`);
+ const cp=v=>`${E(v)}<button class="cp" data-cp="${E(v)}">copy</button>`;
+ let h=`<div class="ct"><b>📇 ${E(d)}, ${E(x.state)}</b><br>`;
+ if(c&&(c.emails.length||c.phones.length)){
+  if(c.emails.length)h+=`✉️ ${c.emails.map(cp).join(" · ")}<br>`;
+  if(c.phones.length)h+=`📞 ${c.phones.map(cp).join(" · ")}<br>`;
+  if(c.site)h+=`🌐 <a href="${E(c.site)}" target="_blank" rel="noopener">Official page</a> · `;
+  if(c.emails[0]){const s=encodeURIComponent(`Collaboration on ${x.field} exposure programme – ${x.country}`),b=encodeURIComponent(`Respected Sir/Madam,\n\nWe are Feelivacation Travel & Wellness Pvt. Ltd. We understand your department is planning a ${x.field} programme in ${x.country}. We would be glad to assist with planning and ground arrangements.\n\nRegards`);h+=`<a href="mailto:${E(c.emails[0])}?subject=${s}&body=${b}">Draft outreach email</a> · `}
+  h+=`<a href="${g}" target="_blank" rel="noopener">Search more</a><div class="m">Auto-found – verify on official site before contacting.</div>`
+ }else h+=`<span class="m">Contact abhi auto-find nahi hua (agle run mein try hoga).</span><br><a href="${g}" target="_blank" rel="noopener">🔎 Search official contact</a>`;
+ return h+"</div>"}
+function recHTML(x){return `<div class="rec"><h4>${E(x.country)} · <span class="ch a">${E(x.field)}</span>${x.delegates?`<span class="ch">${E(x.delegates)}</span>`:""}</h4>${E(x.summary)}<div class="m">${E(x.dates)} ${E(x.source)} · ${E(x.published)} · confidence ${Math.round(x.confidence*100)}% · ${/^https?:/.test(x.url)?`<a href="${E(x.url)}" target="_blank" rel="noopener">source</a>`:""}</div>${contact(x)}</div>`}
+const match=x=>(!F.f||x.field===F.f)&&(!F.c||x.country===F.c)&&(!F.q||JSON.stringify(x).toLowerCase().includes(F.q.toLowerCase()));
+function R(){const V=D.filter(match);
+ $("k1").textContent=D.length;$("k2").textContent=new Set(D.map(x=>x.state)).size;$("k3").textContent=new Set(D.map(x=>x.country)).size;$("k4").textContent=D.filter(x=>{const c=ck(x);return c&&(c.emails.length||c.phones.length)}).length;
+ const f=F.f,c=F.c;$("ff").innerHTML=opt(u(D.map(x=>x.field)),"All fields");$("ff").value=f;$("fc").innerHTML=opt(u(D.map(x=>x.country)),"All countries");$("fc").value=c;
+ if(tab===2){$("main").innerHTML=V.slice(0,200).map(x=>`<div style="padding:4px 16px 8px"><b>${E(x.state)}</b>${recHTML(x)}</div>`).join("")||'<div class="emp">Koi record nahi mila.</div>';return}
+ const q=F.q.toLowerCase(),fil=F.f||F.c;
+ let S=STATES.filter(s=>!q||s.toLowerCase().includes(q)||V.some(x=>x.state===s));if(fil)S=S.filter(s=>V.some(x=>x.state===s));
+ S.sort((a,b)=>V.filter(x=>x.state===b).length-V.filter(x=>x.state===a).length||a.localeCompare(b));
+ $("main").innerHTML=`<table><tr><th>State / UT</th><th>Fields</th><th>Tours</th><th>Latest</th><th style="min-width:260px">My notes</th></tr>`+S.map(s=>{const r=V.filter(x=>x.state===s),fs={};r.forEach(x=>fs[x.field]=(fs[x.field]||0)+1);
+  return `<tr class="s" data-s="${E(s)}"><td class="st">${open.has(s)?"▾":"▸"} ${E(s)}</td><td>${Object.entries(fs).map(([k,v])=>`<span class="ch a">${E(k)} · ${v}</span>`).join("")||'<span class="m">–</span>'}</td><td><span class="n ${r.length?"h":""}">${r.length}</span></td><td class="m">${r[0]?E(r[0].country)+"<br>"+E((r[0].published||"").slice(0,16)):"–"}</td><td><textarea data-n="${E(s)}" placeholder="Reminder / important update…">${E(N[s]||"")}</textarea></td></tr>`+(open.has(s)?`<tr class="dt"><td colspan="5">${r.map(recHTML).join("")||'<div class="m" style="padding:10px">Is state ka abhi koi record nahi.</div>'}</td></tr>`:"")}).join("")+"</table>"}
+$("main").addEventListener("click",e=>{const cp=e.target.closest("[data-cp]");if(cp){navigator.clipboard&&navigator.clipboard.writeText(cp.dataset.cp);cp.textContent="✓";return}
+ if(e.target.closest("textarea,a"))return;const r=e.target.closest("tr.s");if(r){const s=r.dataset.s;open.has(s)?open.delete(s):open.add(s);R()}});
+$("main").addEventListener("input",e=>{const n=e.target.dataset.n;if(n){N[n]=e.target.value;saveN()}});
+$("main").addEventListener("focusout",()=>{if(pend){pend=false;setTimeout(()=>{if(document.activeElement.tagName!=="TEXTAREA")R()},50)}});
+$("t1").onclick=()=>{tab=1;$("t1").className="on";$("t2").className="";R()};$("t2").onclick=()=>{tab=2;$("t2").className="on";$("t1").className="";R()};
+$("q").oninput=e=>{F.q=e.target.value;R()};$("ff").onchange=e=>{F.f=e.target.value;R()};$("fc").onchange=e=>{F.c=e.target.value;R()};
+$("bell").onclick=async()=>{try{$("bell").textContent=(await Notification.requestPermission())==="granted"?"🔔 Alerts ON":"🔕 Blocked"}catch(e){}};
+function dl(name,txt,type){const a=document.createElement("a");a.href="data:"+type+";charset=utf-8,"+encodeURIComponent(txt);a.download=name;a.click()}
+$("ex").onclick=()=>dl("radar-notes.json",JSON.stringify(N,null,1),"application/json");
+$("im").onclick=()=>$("fi").click();$("fi").onchange=async e=>{try{N={...N,...JSON.parse(await e.target.files[0].text())};saveN();R();toast("Notes restored","Backup file se notes wapas aa gaye")}catch(x){toast("Error","Valid backup file chuno")}};
+$("csv").onclick=()=>{const h=["state","field","country","delegates","dates","summary","source","url","published"],rows=D.map(x=>{const c=ck(x)||{};return h.map(k=>'"'+String(x[k]??"").replace(/"/g,'""')+'"').concat(['"'+(c.emails||[]).join("; ")+'"','"'+(c.phones||[]).join("; ")+'"','"'+(N[x.state]||"").replace(/"/g,'""')+'"']).join(",")});dl("delegations.csv",[h.concat(["emails","phones","my_notes"]).join(",")].concat(rows).join("\n"),"text/csv")};
+async function load(){try{const [d,c]=await Promise.all([fetch("data.json?t="+Date.now()).then(r=>r.json()),fetch("contacts.json?t="+Date.now()).then(r=>r.json()).catch(()=>({}))]);
+ const ids=new Set(D.map(x=>x.id)),add=d.filter(x=>!ids.has(x.id)),chg=JSON.stringify(c)!==JSON.stringify(C);D=d;C=c;
+ if(!first)add.slice(0,5).forEach(x=>toast(`${x.state} → ${x.country} (${x.field})`,x.summary));
+ if(first||add.length||chg){if(document.activeElement&&document.activeElement.tagName==="TEXTAREA")pend=true;else R()}
+ first=false;$("d").className="dot on";$("ls").textContent="Live · auto-refresh 60s"}catch(e){$("ls").textContent="loading…";if(first){first=false;R()}}}
+load();setInterval(load,60000);
+</script></body></html>
